@@ -6,6 +6,8 @@ import TheWelcome from '../components/TheWelcome.vue'
 
 <template>
     <main>
-        <TheWelcome/>
+        <div>
+            Work in progress...
+        </div> 
     </main>
 </template>

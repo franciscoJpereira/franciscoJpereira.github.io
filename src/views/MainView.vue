@@ -1,19 +1,25 @@
 <script setup lang="ts">
+import WorkInProgressCard from '@/components/WorkInProgressCard.vue';
+import Menu from '@/components/Menu.vue';
+
+const options = [
+{
+    name: "About",
+    active: true
+},
+{
+    name: "Blog",
+    active: false 
+}
+]
 
 </script>
 
 
 <template>
     <div class="main-background bg-background">
-        <div class="menu-card bg-primary" >
-            <v-card class="bg-secondary text-center" text="About" variant="tonal"></v-card>
-            <v-card class="bg-primary text-center" text="Blog" variant="tonal"></v-card>         
-        </div> 
-        <div class="in-progress-container">
-            <v-card class="work-in-progress-card bg-primary">
-                <v-card-title class="text-center">Work In Progress...</v-card-title>
-            </v-card>
-        </div>
+        <Menu :flex="1" :options="options"/>
+        <WorkInProgressCard :flex='9'/>        
     </div>
 </template>
 
@@ -27,18 +33,6 @@
    flex-direction: column;
    justify-content: space-evenly;
    position: static;
-}
-
- .work-in-progress-card {
-    height: 50vh;
-    width: 40vw;
-    align-content: center;
-}
- .in-progress-container {
-    flex: 9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
  .main-background {

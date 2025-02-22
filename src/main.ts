@@ -22,9 +22,6 @@ const vuetify = createVuetify({
             }
         }
     },
-    icons: {
-        iconfont: 'mdi'
-    },
     components,
     directives
 })

@@ -9,7 +9,7 @@ const About = about as AboutInfo;
 
 const step = ref(1);
 
-const goTo = (value: Number) => {
+const goTo = (value: number) => {
     step.value = value
 }
 </script>

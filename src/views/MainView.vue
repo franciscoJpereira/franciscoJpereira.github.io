@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import AboutPage from '@/components/AboutPage.vue';
 import about from '@/assets/aboutInfo.json';
-import { AboutInfo } from '@/types/pageTypes';
+import { type AboutInfo } from '@/types/pageTypes';
 
 const About = about as AboutInfo;
 

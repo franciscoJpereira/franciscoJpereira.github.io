@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import { AboutInfo } from '@/types/pageTypes';
-import { useTheme } from 'vuetify/lib/framework.mjs';
+import {type AboutInfo } from '@/types/pageTypes';
+import {useTheme} from 'vuetify'
 import colors from 'vuetify/util/colors'
 defineProps<{
     flex: Number,
     info: AboutInfo
     }>()
 
-    const theme = useTheme()
+    const theme = useTheme();
 
 </script>
 

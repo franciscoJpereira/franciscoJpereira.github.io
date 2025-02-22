@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import WorkInProgressCard from '@/components/WorkInProgressCard.vue';
 import Menu from '@/components/Menu.vue';
+import AboutPage from '@/components/AboutPage.vue';
+
 
 const options = [
 {
@@ -12,14 +14,13 @@ const options = [
     active: false 
 }
 ]
-
 </script>
 
 
 <template>
     <div class="main-background bg-background">
         <Menu :flex="1" :options="options"/>
-        <WorkInProgressCard :flex='9'/>        
+        <AboutPage :flex="1" />
     </div>
 </template>
 

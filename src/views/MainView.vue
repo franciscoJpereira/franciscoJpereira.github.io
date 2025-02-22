@@ -1,26 +1,16 @@
 <script setup lang="ts">
-import WorkInProgressCard from '@/components/WorkInProgressCard.vue';
-import Menu from '@/components/Menu.vue';
 import AboutPage from '@/components/AboutPage.vue';
+import about from '@/assets/aboutInfo.json';
+import { AboutInfo } from '@/types/pageTypes';
 
+const About = about as AboutInfo;
 
-const options = [
-{
-    name: "About",
-    active: true
-},
-{
-    name: "Blog",
-    active: false 
-}
-]
 </script>
 
 
 <template>
     <div class="main-background bg-background">
-        <Menu :flex="1" :options="options"/>
-        <AboutPage :flex="1" />
+        <AboutPage :flex="1" :info="About"/>
     </div>
 </template>
 

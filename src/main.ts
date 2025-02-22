@@ -9,15 +9,16 @@ import 'vuetify/styles'
 import { createVuetify } from 'vuetify'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
+import colors from 'vuetify/util/colors'
 
 const vuetify = createVuetify({
     theme: {
         themes: {
             light: {
                 colors: {
-                    secondary: '#7E52A0',
-                    primary: '#29274C',
-                    background: '#012A36',
+                    secondary: colors.orange.accent3,
+                    primary: colors.orange.accent2,
+                    background: colors.orange.lighten5,
                 }
 
             }

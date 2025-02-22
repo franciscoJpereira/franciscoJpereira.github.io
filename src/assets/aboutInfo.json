@@ -1,0 +1,25 @@
+{
+    "title": "Sobre Mi",
+    "paragraphs": [
+        "Hola! Me llamo Francisco Pereira. Soy Ingeniero en informática graduado de la Universidad de Buenos aires. Actualmente trabajo como arquitecto empresarial para Pan American Energy donde entre otras cosas me dedico a diseñar y validar arquitecturas cloud (tanto en AWS como en Azure).",
+        "Me gusta e interesa profundizar sobre temas asociados a mi carrera, las áreas en las que últimamente estuve haciendo foco son Blockchain, Generative AI y Cloud, por lo que lleve adelante algún que otro proyecto personal para probar y entender un poco mejor cómo se construyen soluciones con estas tecnologías. Lo que me llevó a descubrir frameworks como Anchor, que es un framework de desarrollo de Smart Contracts sobre la red Solana; Langhain y FastAPI, para construir soluciones que se integren con Gen AI; Terraform para declarar y desplegar infraestructura en la nube (e incluso un poco para construir ambientes locales con Docker)."
+    ],
+    "timeline": [
+        {
+            "contentTitle": "Estudiando Ing. en informática",
+            "content": "Facultad de Ingenieria de la universidad de buenos aires",
+            "contentOposite": "marzo 2020 - diciembre 2024"
+        },
+        {
+            "contentTitle": "Colaborador Organizacion de datos",
+            "content": "Colaborador de la materia de ciencia de datos en la facultad de ingenieria. Ayudando a corregir trabajos practicos y resolviendo dudas de alumnos",
+            "contentOposite": "agosto 2022 - marzo 2025"
+        },
+        {
+            "contentTitle": "Arquitecto empresarial",
+            "content": "En Pan American Energy, trabajando sobre Azure y AWS construyendo arquitecturas escalables sobre el principio de serverless first",
+            "contentOposite": "abril 2023 - actualidad"
+        }
+    ],
+    "timelineTitle": "En el tiempo"
+}

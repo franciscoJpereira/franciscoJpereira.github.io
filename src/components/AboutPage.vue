@@ -1,23 +1,48 @@
 <script setup lang="ts">
-defineProps({
+import { AboutInfo } from '@/types/pageTypes';
+import { useTheme } from 'vuetify/lib/framework.mjs';
+import colors from 'vuetify/util/colors'
+defineProps<{
     flex: Number,
-})
+    info: AboutInfo
+    }>()
+
+    const theme = useTheme()
+
 </script>
 
 <template>
-   <div :style="{'flex': flex}"
+   <div :style="{flex: flex.toString()}"
         class="about-container"
    >
         <div class="title-container text-center">
-            <h1>Sobre Mi</h1>
+            <h2>{{ info.title }}</h2>
         </div>
-        <div class="info-conatiner text-center">
-            <p class="text-paragraph">
-                Hola! Mi nombre soy Francisco Pereira, Ingeniero en informatica
-                graduado de la Universidad de Buenos Aires...
+        <div v-for="paragraph in info.paragraphs" class="info-conatiner text-center text-start">
+            <p  class="text-paragraph">
+                {{ paragraph }}
             </p>
             <br></br>
-            <p class="text-paragraph"></p>
+        </div>
+        <div class="timeline-container">
+            <h3 class="text-center mb-10">{{ info.timelineTitle }}</h3>
+             <v-timeline direction="horizontal"
+                        :line-color="theme.current.value.colors.primary"
+                        :dot-color="theme.current.value.colors.secondary"
+                        fill-dot
+             >
+                <v-timeline-item v-for="dot in info.timeline">
+                    <template v-slot:opposite>
+                        {{ dot.contentOposite }}
+                    </template>
+                    <div>
+                        <div class="text-h6">{{ dot.contentTitle }}</div>
+                        <p>
+                            {{ dot.content }}
+                        </p>
+                    </div>
+                </v-timeline-item>
+        </v-timeline>
         </div>
    </div> 
 </template>
@@ -32,9 +57,12 @@ defineProps({
         height: 10%;
         width: 100%; 
     }
-    .info-container {
+    .timeline-container {
+        padding-top: 5%;
     }
     .text-paragraph {
-        font-size: larger;
+        font-size: medium;
+        padding-left: 1%;
+        padding-right: 1%;
     }
 </style>

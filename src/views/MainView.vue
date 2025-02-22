@@ -16,20 +16,10 @@ const About = about as AboutInfo;
 
 
 <style>
- .menu-card {
-   flex: 1;
-   max-width: 10vw;
-   min-height: 100vh;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-evenly;
-   position: static;
-}
-
  .main-background {
     display: flex;
     flex-direction: row;
-    width: 100%;
-    height: 100%;
+    min-width: 100vw;
+    min-height: 100vh;
  }
 </style>

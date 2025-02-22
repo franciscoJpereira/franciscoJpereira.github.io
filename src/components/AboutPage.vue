@@ -58,6 +58,7 @@ defineProps<{
     }
     .timeline-container {
         padding-top: 5%;
+        max-width: 100%;
     }
     .text-paragraph {
         font-size: medium;

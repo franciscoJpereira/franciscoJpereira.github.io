@@ -12,7 +12,7 @@ defineProps<{
 
 <template>
    <div :style="{flex: flex.toString()}"
-        class="about-container"
+        class="about-container bg-background"
    >
         <div class="title-container text-center">
             <h2>{{ info.title }}</h2>

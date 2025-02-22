@@ -9,7 +9,7 @@ const About = about as AboutInfo;
 
 
 <template>
-    <div class="main-background bg-background">
+    <div class="main-background">
         <AboutPage :flex="1" :info="About"/>
     </div>
 </template>

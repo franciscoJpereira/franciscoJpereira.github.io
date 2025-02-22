@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import {type AboutInfo } from '@/types/pageTypes';
 import {useTheme} from 'vuetify'
+import Github from './icons/Github.vue';
+import Linkedin from './icons/Linkedin.vue';
 defineProps<{
     flex: Number,
     info: AboutInfo
@@ -43,6 +45,10 @@ defineProps<{
                 </v-timeline-item>
         </v-timeline>
         </div>
+        <div class="social-links">
+            <Github />
+            <Linkedin />
+        </div>
    </div> 
 </template>
 
@@ -59,6 +65,13 @@ defineProps<{
     .timeline-container {
         padding-top: 5%;
         max-width: 100%;
+    }
+    .social-links {
+        position: absolute;
+        bottom: 0;
+        width: 100vw;
+        display: flex;
+        justify-content: space-evenly;
     }
     .text-paragraph {
         font-size: medium;

@@ -29,6 +29,5 @@ const About = about as AboutInfo;
  .main-background {
     display: flex;
     flex-direction: row;
-    min-height: 100vh;
  }
 </style>

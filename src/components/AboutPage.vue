@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import {type AboutInfo } from '@/types/pageTypes';
 import {useTheme} from 'vuetify'
-import colors from 'vuetify/util/colors'
 defineProps<{
     flex: Number,
     info: AboutInfo
@@ -64,5 +63,6 @@ defineProps<{
         font-size: medium;
         padding-left: 1%;
         padding-right: 1%;
+        max-width: 100%;
     }
 </style>

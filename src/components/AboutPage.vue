@@ -3,12 +3,19 @@ import {type AboutInfo } from '@/types/pageTypes';
 import {useTheme} from 'vuetify'
 import Github from './icons/Github.vue';
 import Linkedin from './icons/Linkedin.vue';
+const isMobile = () => {
+   if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+     return true
+   } else {
+     return false
+   }
+ }
 defineProps<{
     flex: Number,
     info: AboutInfo
     }>()
 
-    const theme = useTheme();
+const theme = useTheme();
 
 </script>
 
@@ -26,12 +33,14 @@ defineProps<{
             <br></br>
         </div>
         <div class="timeline-container">
-             <v-timeline direction="horizontal"
+             <v-timeline 
+                        :direction='isMobile() ? "vertical" : "horizontal"'
                         :line-color="theme.current.value.colors.primary"
                         :dot-color="theme.current.value.colors.secondary"
                         fill-dot
              >
-                <v-timeline-item v-for="dot in info.timeline">
+                <v-timeline-item 
+                    v-for="dot in info.timeline">
                     <template v-slot:opposite>
                         {{ dot.contentOposite }}
                     </template>
@@ -44,7 +53,7 @@ defineProps<{
                 </v-timeline-item>
         </v-timeline>
         </div>
-        <div class="social-links">
+        <div :class="isMobile() ? 'social-links-mobile' : 'social-links-web'">
             <Github />
             <Linkedin />
         </div>
@@ -55,6 +64,7 @@ defineProps<{
     .about-container {
         display: flex;
         flex-direction: column;
+        max-width: 100%;
     }
     .title-container {
         margin-top: 1%;
@@ -63,11 +73,18 @@ defineProps<{
     }
     .timeline-container {
         padding-top: 5%;
+        padding-left: 1%;
+        padding-right: 1%;
         max-width: 100%;
     }
-    .social-links {
-        position: absolute;
+    .social-links-web {
+        position:absolute;
         bottom: 0;
+        width: 100vw;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .social-links-mobile {
         width: 100vw;
         display: flex;
         justify-content: space-evenly;

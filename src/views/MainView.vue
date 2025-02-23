@@ -19,7 +19,7 @@ const goTo = (value: number) => {
     <div class="nav-pane bg-background">
         <v-btn @click="goTo(1)" variant="tonal">Sobre Mi</v-btn>
         <v-btn @click="goTo(2)" variant="tonal">proyectos</v-btn>
-        <v-btn @click="goTo(3)" variant="tonal">Blog</v-btn>
+        <!--<v-btn @click="goTo(3)" variant="tonal">Blog</v-btn>-->
     </div>
     <v-window v-model="step">        
         <v-window-item 
@@ -34,12 +34,13 @@ const goTo = (value: number) => {
         >
             <WorkInProgressCard :flex="1"/>
         </v-window-item>
-        <v-window-item
+<!--        <v-window-item
             :value="3"
             class="main-background bg-background"
         >
             <WorkInProgressCard :flex="1"/>
         </v-window-item>
+-->
     </v-window>
 </template>
 

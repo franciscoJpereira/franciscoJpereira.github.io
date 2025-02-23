@@ -26,7 +26,6 @@ defineProps<{
             <br></br>
         </div>
         <div class="timeline-container">
-            <h3 class="text-center mb-10">{{ info.timelineTitle }}</h3>
              <v-timeline direction="horizontal"
                         :line-color="theme.current.value.colors.primary"
                         :dot-color="theme.current.value.colors.secondary"
